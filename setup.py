@@ -20,8 +20,8 @@ setup(
     license="MIT",
     url="https://github.com/coherent-oss/pytest-black",
     description="A pytest plugin to enable format checking with black",
-    long_description=read("README.md"),
-    long_description_content_type="text/markdown",
+    long_description=read("README.rst"),
+    long_description_content_type="text/x-rst",
     py_modules=["pytest_black"],
     python_requires=">=3.5",
     install_requires=[
