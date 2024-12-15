@@ -1,8 +1,6 @@
 pytest-black
 ============
 
-[![Build Status](https://travis-ci.org/shopkeep/pytest-black.svg?branch=master)](https://travis-ci.org/shopkeep/pytest-black)
-
 A pytest plugin to enable format checking with [black](https://github.com/ambv/black).
 
 
@@ -81,4 +79,4 @@ Distributed under the terms of the `MIT` license, `pytest-black` is free and ope
 Issues
 ------
 
-If you encounter any problems, please [file an issue](https://github.com/shopkeep/pytest-black/issues) along with a detailed description.
+If you encounter any problems, please [file an issue](https://github.com/coherent-oss/pytest-black/issues) along with a detailed description.
