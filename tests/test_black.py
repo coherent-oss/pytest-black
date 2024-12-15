@@ -12,8 +12,7 @@ def test_help_message(pytester):
 
 
 def test_fail(pytester):
-    """Assert test fails due to single quoted strings
-    """
+    """Assert test fails due to single quoted strings"""
     pytester.makepyfile(
         """
         def hello():
@@ -25,8 +24,7 @@ def test_fail(pytester):
 
 
 def test_pass(pytester):
-    """Assert test passes when no formatting issues are found
-    """
+    """Assert test passes when no formatting issues are found"""
     p = pytester.makepyfile(
         """
         def hello():
@@ -41,8 +39,7 @@ def test_pass(pytester):
 
 
 def test_mtime_cache(pytester):
-    """Assert test is skipped when file hasn't changed
-    """
+    """Assert test is skipped when file hasn't changed"""
     p = pytester.makepyfile(
         """
         def hello():
@@ -69,8 +66,7 @@ def test_mtime_cache(pytester):
 
 
 def test_exclude(pytester):
-    """Assert test is skipped if path is excluded even if also included
-    """
+    """Assert test is skipped if path is excluded even if also included"""
     pytester.makepyprojecttoml(
         """
         [tool.black]
@@ -96,8 +92,7 @@ def test_exclude(pytester):
 
 
 def test_exclude_folder(pytester):
-    """Assert test is skipped for files in a folder
-    """
+    """Assert test is skipped for files in a folder"""
     pytester.makepyprojecttoml(
         """
         [tool.black]
@@ -132,8 +127,7 @@ def test_exclude_folder(pytester):
 
 
 def test_include(pytester):
-    """Assert test is not skipped if path is included but not excluded
-    """
+    """Assert test is not skipped if path is included but not excluded"""
     pytester.makepyprojecttoml(
         """
         [tool.black]
