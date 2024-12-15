@@ -13,12 +13,12 @@ def read(fname):
 
 setup(
     name="pytest-black",
-    author="ShopKeep Inc",
+    author="ShopKeep, Inc.",
     author_email="oss@shopkeep.com",
-    maintainer="ShopKeep Inc",
-    maintainer_email="oss@shopkeep.com",
+    maintainer="Jason R. Coombs",
+    maintainer_email="jaraco@jaraco.com",
     license="MIT",
-    url="https://github.com/shopkeep/pytest-black",
+    url="https://github.com/coherent-oss/pytest-black",
     description="A pytest plugin to enable format checking with black",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
@@ -32,7 +32,7 @@ setup(
         "toml",
     ],
     use_scm_version=True,
-    setup_requires=['setuptools_scm'],
+    setup_requires=["setuptools_scm"],
     classifiers=[
         "Development Status :: 4 - Beta",
         "Framework :: Pytest",
