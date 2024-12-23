@@ -41,8 +41,8 @@ def pytest_unconfigure(config):
 
 class BlackFile(pytest.File):
     def collect(self):
-        """ returns a list of children (items and collectors)
-            for this collection node.
+        """returns a list of children (items and collectors)
+        for this collection node.
         """
         yield BlackItem.from_parent(self, name="black")
 
@@ -74,7 +74,15 @@ class BlackItem(pytest.Item):
             pytest.skip("file(s) excluded by pyproject.toml")
 
     def runtest(self):
-        cmd = [sys.executable, "-m", "black", "--check", "--diff", "--quiet", str(self.path)]
+        cmd = [
+            sys.executable,
+            "-m",
+            "black",
+            "--check",
+            "--diff",
+            "--quiet",
+            str(self.path),
+        ]
         try:
             subprocess.run(
                 cmd, check=True, stdout=subprocess.PIPE, universal_newlines=True
