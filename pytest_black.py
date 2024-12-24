@@ -20,9 +20,9 @@ def pytest_addoption(parser):
     )
 
 
-def pytest_collect_file(file_path, path, parent):
+def pytest_collect_file(file_path, parent):
     config = parent.config
-    if config.option.black and path.ext in [".py", ".pyi"]:
+    if config.option.black and file_path.suffix in [".py", ".pyi"]:
         return BlackFile.from_parent(parent, path=file_path)
 
 
